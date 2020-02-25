@@ -51,7 +51,7 @@ open class MKRefreshControl: UIControl {
         refreshBlock = block
         parentScrollView = {
             scrollView.addSubview(self)
-            scrollView.sendSubview(toBack: self)
+            scrollView.sendSubviewToBack(self)
             scrollView.panGestureRecognizer.addTarget(self, action: #selector(handlePanGestureRecognizer))
             scrollView.addObserver(self, forKeyPath: "contentOffset", options: .new, context: nil)
             return scrollView
@@ -199,28 +199,28 @@ open class MKRefreshControl: UIControl {
         startHeadAnim.fromValue = 0
         startHeadAnim.toValue = 0.25
         startHeadAnim.duration = 1
-        startHeadAnim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        startHeadAnim.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         
         let startTailAnim = CABasicAnimation(keyPath: "strokeEnd")
         startTailAnim.beginTime = 0.1
         startTailAnim.fromValue = 0
         startTailAnim.toValue = 1
         startTailAnim.duration = 1
-        startTailAnim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        startTailAnim.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         
         let endHeadAnim = CABasicAnimation(keyPath: "strokeStart")
         endHeadAnim.beginTime = 1
         endHeadAnim.fromValue = 0.25
         endHeadAnim.toValue = 0.99
         endHeadAnim.duration = 0.5
-        endHeadAnim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        endHeadAnim.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         
         let endTailAnim = CABasicAnimation(keyPath: "strokeEnd")
         endTailAnim.beginTime = 1
         endTailAnim.fromValue = 1
         endTailAnim.toValue = 1
         endTailAnim.duration = 0.5
-        endTailAnim.toValue = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        endTailAnim.toValue = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         
         let strokeAnimGroup = CAAnimationGroup()
         strokeAnimGroup.duration = 1.5
@@ -255,7 +255,7 @@ open class MKRefreshControl: UIControl {
         opacityAnimation.toValue = 0
         opacityAnimation.duration = 0.25
         opacityAnimation.isRemovedOnCompletion = false
-        opacityAnimation.fillMode = kCAFillModeForwards
+        opacityAnimation.fillMode = CAMediaTimingFillMode.forwards
         
         progressLayer?.add(opacityAnimation, forKey: "opacity")
         

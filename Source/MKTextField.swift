@@ -190,7 +190,7 @@ open class MKTextField : UITextField {
         
         if text?.isEmpty == false {
             let dTop = floatingLabel.font.lineHeight + floatingLabelBottomMargin
-            newRect = UIEdgeInsetsInsetRect(newRect, UIEdgeInsets(top: dTop, left: 0.0, bottom: 0.0, right: 0.0))
+            newRect = newRect.inset(by: UIEdgeInsets(top: dTop, left: 0.0, bottom: 0.0, right: 0.0))
         }
         
         return newRect

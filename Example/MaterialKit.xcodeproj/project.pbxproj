@@ -140,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				8C4D63901A160C95003629F6 /* MaterialKit */,
-				8C4D638F1A160C95003629F6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +149,7 @@
 				8C4D638E1A160C95003629F6 /* MaterialKit.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		8C4D63901A160C95003629F6 /* MaterialKit */ = {
@@ -164,6 +164,7 @@
 				90F956291C5B54BA0056B976 /* Switch Example */,
 				8C4D639A1A160C95003629F6 /* Images.xcassets */,
 				8C4D639C1A160C95003629F6 /* LaunchScreen.xib */,
+				8C4D638F1A160C95003629F6 /* Products */,
 				8C4D63911A160C95003629F6 /* Supporting Files */,
 			);
 			path = MaterialKit;
@@ -252,6 +253,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -447,7 +449,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nghialv.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -464,7 +466,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nghialv.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

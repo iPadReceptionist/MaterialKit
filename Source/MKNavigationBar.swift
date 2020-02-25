@@ -39,7 +39,7 @@ open class MKNavigationBar: UINavigationBar {
     @IBInspectable open override var tintColor: UIColor! {
         didSet {
             #if swift(>=4)
-                UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: tintColor]
+                UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: tintColor!]
             #else
                 UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: tintColor]
             #endif
@@ -69,7 +69,7 @@ open class MKNavigationBar: UINavigationBar {
         UINavigationBar.appearance().backgroundColor = tintColor
         UINavigationBar.appearance().tintColor = tintColor
         #if swift(>=4.0)
-            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: tintColor]
+            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: tintColor!]
         #else
             UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: tintColor]
         #endif
