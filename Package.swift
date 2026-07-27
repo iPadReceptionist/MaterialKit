@@ -18,10 +18,6 @@ let package = Package(
         .target(
             name: "MaterialKit",
             dependencies: []
-        ),
-        .testTarget(
-            name: "YourLibraryTests",
-            dependencies: ["YourLibrary"]
-        ),
+        )
     ]
 )
